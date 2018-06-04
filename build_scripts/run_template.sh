@@ -28,7 +28,8 @@ echo "run completed"
 
 echo "Moving logs to archive"
 for f in log/*.log; do
-    mv log/"$f" log/archive/"$DATESTR"_"$f"
+    n=`basename "$f"`
+    mv log/"$n" log/archive/"$DATESTR"_"$n"
 done
 
 echo "start time"
